@@ -35,5 +35,4 @@ constraints
 - Had a misunderstanding of location for the meeting, so Philip was unexpectedly absent. He apologised in Discord
 - Saul & Daniel briefly discussed the plan for the lab and began distributing tasks. Agreed to do joint work on meeting minutes
 - Reviewed Daniel's preliminary GUI design. Saul suggested that having several input/drop-down boxes does not allow for UNION statements,
-- or for more complex SQL queries, and proposed also having a plain input box which parses text straight to SQL rather than compositing
-- several variables into a query. This would allow more advanced users to build some of the more complex queries given in use-case specifications in the assessment document.
+- or for more complex SQL queries, and proposed also having a plain input box which parses text straight to SQL rather than compositing several variables into a query. This would allow more advanced users to build some of the more complex queries given in use-case specifications in the assessment document.
