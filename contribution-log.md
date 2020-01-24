@@ -6,15 +6,15 @@
 |      | Philip       | Project Backlog         | 17/01/2020    | 21/01/2020    | Y          |
 |      | Saul         | Contribution Log        | 17/01/2020    | 21/01/2020    | Y          |
 | 2    |              |                         |               |               |            |
-|      | Daniel       | Travis CI setup         | 17/01/2020    | 24/01/2020    | N          |
-|      | Connor       |                         |               |               | N          |
-|      | Philip       | File Formatting (Issue) |               |               | N          |
+|      | Daniel       | Travis CI setup         | 17/01/2020    | 24/01/2020    | Y          |
+|      | Connor       | GitHub Workflow/Branches|               |               | Y          |
+|      | Philip       | File Formatting (Issue) |               |               | Y          |
 |      | Saul         | Minutes                 | 21/01/2020    | 21/01/2020    | Y          |
 | 3    |              |                         |               |               |            |
-|      | Daniel       |                         |               |               |            |
+|      | Daniel       | IDE and build tweaks    | 24/01/2020    | 28/01/2020    |            |
 |      | Connor       |                         |               |               |            |
-|      | Philip       |                         |               |               |            |
-|      | Saul         |                         |               |               |            |
+|      | Philip       | IDE and build tweaks    | 24/01/2020    | 28/01/2020    |            |
+|      | Saul         | Zube.io tasks updated   | 24/01/2020    | 24/01/2020    | Y           |
 | 4    |              |                         |               |               |            |
 |      | Daniel       |                         |               |               |            |
 |      | Connor       |                         |               |               |            |
