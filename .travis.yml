@@ -1,4 +1,13 @@
+sudo: required
+
 language: java
+
 services:
   - docker
-script: mvn clean verify
+
+after_success:
+  - docker network create --driver bridge matrix_link
+  - docker pull mariadb
+  - docker run -d --name MariaDB_Container --network matrix_link mariadb
+  - docker build -t Java_Container .
+  - docker run --network matrix_link Java_Container
