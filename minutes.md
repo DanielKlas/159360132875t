@@ -36,3 +36,11 @@ constraints
 - Saul & Daniel briefly discussed the plan for the lab and began distributing tasks. Agreed to do joint work on meeting minutes
 - Reviewed Daniel's preliminary GUI design. Saul suggested that having several input/drop-down boxes does not allow for UNION statements,
 - or for more complex SQL queries, and proposed also having a plain input box which parses text straight to SQL rather than compositing several variables into a query. This would allow more advanced users to build some of the more complex queries given in use-case specifications in the assessment document.
+
+### Meeting 4 | 24/01/2020 | 13:00-14:00
+
+- Connor didn't come, but notified the group in advance, thus it was expected. Despite it being his second absence in a row, it's acceptable
+since it was a planned and justified absence
+- The group discussed options for branch structure. Philip gave a short refresher explanation of how branches and version control should be used, and Saul cited repositories such as TensorFlow, FreeCodeCamp and React.js to support his conclusions
+- The group decided to scrap the 'Minutes' and 'Code of Conduct' branches, moving them back to the master branch
+- Discussed database platforms and integration
