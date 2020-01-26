@@ -1,3 +1,3 @@
 # 159360132875t
 **Software Engineering Methods**
-Lab 1 Readme
+This is the first release. It contains all the necessary files for the first code review. 
