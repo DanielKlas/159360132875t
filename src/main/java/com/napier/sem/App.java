@@ -3,6 +3,6 @@ package com.napier.sem;
 public class App {
     public static void main(String[] args)
     {
-        System.out.println("Ayy Lmao");
+        System.out.println("Yay it works :)");
     }
 }
