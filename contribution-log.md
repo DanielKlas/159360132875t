@@ -5,14 +5,14 @@ N = 'No'
 | Week | Group Member | Work accepted           | Accepted Date | Expected date | Completed? |
 |------|--------------|-------------------------|---------------|---------------|------------|
 | 1    |              |                         |               |               |            |
-|      | Daniel       | Travis CI & Maven setup | 17/01/2020    | 21/01/2020    | Y          |
+|      | Daniel       | Travis CI & Maven setup | 17/01/2020    | 21/01/2020    | -          |
 |      | Daniel       | Minutes transcribed     | 17/01/2020    | 17/01/2020    | Y          |
 |      | Connor       | GitFlow                 | 17/01/2020    | 21/01/2020    | Y          |
 |      | Philip       | Project Backlog         | 17/01/2020    | 21/01/2020    | Y          |
 |      | Saul         | Contribution Log        | 17/01/2020    | 21/01/2020    | Y          |
 | 2    |              |                         |               |               |            |
-|      | Daniel       | Travis CI & Maven setup | 17/01/2020    | 24/01/2020    | Y          |
-|      | Connor       | GitHub Workflow/Branches| 21/01/2020    |               | Y          |
+|      | Daniel       | Travis CI & Maven setup | 17/01/2020    | 24/01/2020    | -          |
+|      | Connor       | GitHub Workflow/Branches| 21/01/2020    | 24/01/2020    | Y          |
 |      | Philip       | File Formatting (Issue) | 21/01/2020    | 24/01/2020    | Y          |
 |      | Saul         | Minutes                 | 21/01/2020    | 21/01/2020    | Y          |
 | 3    |              |                         |               |               |            |
