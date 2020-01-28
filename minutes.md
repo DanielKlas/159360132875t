@@ -44,3 +44,13 @@ since it was a planned and justified absence
 - The group discussed options for branch structure. Philip gave a short refresher explanation of how branches and version control should be used, and Saul cited repositories such as TensorFlow, FreeCodeCamp and React.js to support his conclusions
 - The group decided to scrap the 'Minutes' and 'Code of Conduct' branches, moving them back to the master branch
 - Discussed database platforms and integration
+
+### Meeting 5 | 28/01/2020 | 13:00-14:00
+
+- All members were present
+- Discussed what we need to do for the code review, and made sure that the project builds properly in Travis
+- Connor downloaded the project, zipped it and sent the submission on Moodle
+- Looked at the second code review's specifications and started distributing tasks
+- Discussed adding more detail to the backlog for the next sprint - match the Zube cards to actual tasks assigned rather than 
+using code review requirements
+- 
