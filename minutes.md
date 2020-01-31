@@ -53,4 +53,11 @@ since it was a planned and justified absence
 - Looked at the second code review's specifications and started distributing tasks
 - Discussed adding more detail to the backlog for the next sprint - match the Zube cards to actual tasks assigned rather than 
 using code review requirements
-- 
+
+### Meeting 6 | 31/01/2020 | 13:00-14:00
+
+- Daniel had unavoidable prior committments, so he notified us in advance. The group decided to hold a meeting on VoIP/Text chat instead
+- Listed the agenda for the current meeting
+- The group decided to continue using MariaDB and adapt the boilerplate MySQL code for database integration
+- Connor suggested adding Travis CI build status badges to the README file, which Saul did
+- Philip categorised the different types of required report and suggested an allocation of the tasks
