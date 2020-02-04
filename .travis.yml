@@ -6,8 +6,4 @@ services:
   - docker
 
 after_success:
-  - docker network create --driver bridge matrix_link
-  - docker pull mariadb
-  - docker run -d --name MariaDB_Container --network matrix_link mariadb
-  - docker build -t java_container .
-  - docker run --network matrix_link java_container
+  - docker-compose up --abort-on-container-exit
