@@ -13,6 +13,8 @@ public class App
             a.connect();
 
             City city = a.getCity(1);
+            a.displayCity(city);
+            System.out.println("Passed city display");
             // Disconnect from database
             a.disconnect();
 
@@ -49,6 +51,7 @@ public class App
                 // Connect to database
                 con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
+                System.out.println("In connect function");
                 break;
             }
             catch (SQLException sqle)
@@ -115,5 +118,6 @@ public class App
         {
             System.out.println(city.id + " , " + city.name);
         }
+        System.out.println("I exist!");
     }
 }
