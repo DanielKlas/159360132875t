@@ -1,6 +1,8 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class App
 {
@@ -14,7 +16,15 @@ public class App
 
             City city = a.getCity(1);
             a.displayCity(city);
-            System.out.println("Passed city display");
+            ArrayList<City> cities= a.getAllCities();
+            if (cities!=null) {
+                for (City c : cities) {
+                    a.displayCity(c);
+                }
+            }
+            else{
+                System.out.println("cities is null");
+            }
             // Disconnect from database
             a.disconnect();
 
@@ -80,6 +90,40 @@ public class App
         }
     }
 
+    public ArrayList<City> getAllCities()
+    {
+        ArrayList<City> cities = new ArrayList<City>();
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT * "
+                            + "FROM city ";
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            while(rset.next())
+            {
+                City city = new City();
+                city.id = rset.getInt("ID");
+                city.name = rset.getString("Name");
+                city.country_code=rset.getString("CountryCode");
+                city.district=rset.getString("District");
+                city.population=rset.getInt("Population");
+                cities.add(city);
+            }
+            return cities;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get city details");
+            return null;
+        }
+    }
     public City getCity(int no)
     {
         try
@@ -88,9 +132,8 @@ public class App
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "SELECT ID, Name"
-                            + "FROM city "
-                            + "WHERE ID = " + no;
+                    "SELECT ID, Name, CountryCode, District, Population "
+                            + "FROM city " + "WHERE ID = " + no;
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
             // Return new employee if valid.
@@ -100,6 +143,9 @@ public class App
                 City city = new City();
                 city.id = rset.getInt("ID");
                 city.name = rset.getString("Name");
+                city.country_code=rset.getString("CountryCode");
+                city.district=rset.getString("District");
+                city.population=rset.getInt("Population");
                 return city;
             }
             else
@@ -116,8 +162,9 @@ public class App
     public void displayCity(City city) {
         if (city != null)
         {
-            System.out.println(city.id + " , " + city.name);
+            System.out.println(city.id + " , " + city.name + " , " +
+                    city.country_code + " , " + city.district +
+                    " , " + city.population);
         }
-        System.out.println("I exist!");
     }
 }
