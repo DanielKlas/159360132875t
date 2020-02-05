@@ -59,9 +59,8 @@ public class App
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:maria//db:3306/world?useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:mariadb://db:3306/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
-                System.out.println("In connect function");
                 break;
             }
             catch (SQLException sqle)
