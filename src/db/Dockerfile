@@ -1,5 +1,5 @@
 # Use the latest MySQL image
-FROM mysql
+FROM mariadb
 # Set the working directory
 WORKDIR /tmp
 # Copy all the files to the working directory of the container

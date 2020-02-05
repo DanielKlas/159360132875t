@@ -30,19 +30,19 @@ public class App
 
     }
     /**
-     * Connection to MySQL database.
+     * Connection to MariaDB database.
      */
     private Connection con = null;
 
     /**
-     * Connect to the MySQL database.
+     * Connect to the MariaDB database.
      */
     public void connect()
     {
         try
         {
             // Load Database driver
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("org.mariadb.jdbc.Driver");
         }
         catch (ClassNotFoundException e)
         {
@@ -59,7 +59,7 @@ public class App
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:maria//db:3306/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 System.out.println("In connect function");
                 break;
@@ -77,7 +77,7 @@ public class App
     }
 
     /**
-     * Disconnect from the MySQL database.
+     * Disconnect from the MariaDB database.
      */
     public void disconnect() {
         if (con != null) {
