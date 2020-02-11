@@ -61,3 +61,15 @@ using code review requirements
 - The group decided to continue using MariaDB and adapt the boilerplate MySQL code for database integration
 - Connor suggested adding Travis CI build status badges to the README file, which Saul did
 - Philip categorised the different types of required report and suggested an allocation of the tasks
+
+### Meeting 7 | 04/02/2020 | 13:00-14:00
+
+- Saul was unwell and notified the group in advance
+- The other members discussed the best way to go about creating a database connection
+
+### Meeting 8 | 07/02/2020 | 13:00-14:00
+
+- All members were present
+- The first portion of the meeting was spent settling a disagreement; Connor and Philip were at odds over task assignments. Both members apologised and the group inquired into possible causes for the problem.
+- The group quickly reviewed the current progress of everyone's tasks
+- Discussed the possibility of making some meetings virtual to save unnecessary travel and scheduling issues for Daniel and Connor
