@@ -38,6 +38,12 @@ public class App
         String cityReport = popReportGenerator.getCityQuery("Manchester");
         System.out.println(cityReport);
 
+
+        LanguageReportGenerator languageReportGenerator = new LanguageReportGenerator();
+
+        String languageReport = languageReportGenerator.getLanguagesQuery();
+        System.out.println(languageReport);
+
         // Disconnect from database
         dbConnection.disconnect();
     }
