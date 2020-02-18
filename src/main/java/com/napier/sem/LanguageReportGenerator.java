@@ -9,7 +9,9 @@ public class LanguageReportGenerator {
 
     public String getLanguagesQuery()
     {
-        String string = "SELECT countrylanguage.Language AS 'Language spoken', SUM(country.Population) AS 'Population', ((SUM(country.Population) / 6078749450) * 100) AS 'Percent of the world' "
+        String string = "SELECT countrylanguage.Language AS 'Language spoken', " +
+                "SUM(country.Population * (countrylanguage.Percentage/100)) AS 'Population', " +
+                "SUM(country.Population * (countrylanguage.Percentage/100)) / (SELECT SUM(country.Population) FROM country) * 100 AS 'Percent of the world' "
                 + "FROM country JOIN countrylanguage ON country.Code = countrylanguage.CountryCode "
                 + "WHERE countrylanguage.Language IN ('Chinese','English','Hindi','Spanish','Arabic') "
                 + "GROUP BY countrylanguage.Language ORDER BY SUM(country.Population) DESC; ";
@@ -25,8 +27,8 @@ public class LanguageReportGenerator {
             ResultSet rset = statement.executeQuery(report);
             while(rset.next()) {
                 String languageSpoken = rset.getString("Language spoken");
-                int population = rset.getInt("Population");
-                int percentage = rset.getInt("Percent of the world");
+                long population = rset.getLong("Population");
+                double percentage = rset.getDouble("Percent of the world");
                 display += "Language spoken: " + languageSpoken + " Population of speakers : " + population + " Percent of the world: " + percentage + "\n";
             }
         }
