@@ -7,7 +7,7 @@
 | **Benefits to Organization** | The business will be able to generate reports on population data, enabling its broader function as an organisation |
 | **Trigger(s)** | The employee is met with a request for a simple country report |
 | **Preconditions** | Employee is logged on to the system and has the correct authorisation for the querying application |
-| **Postconditions** | A report is generated, listing the countries in a certain geographical unit from largest to smallest |
+| **Postconditions** | A report is generated, listing the countries in a certain geographical unit, ordered from largest to smallest |
 | **Main Course** | **1A.** Employee constructs SQL query for all the countries in the world 
 |       				  | **2.** Employee submits query (See EX1)
 |       				  | **3.** Database returns a table of results (See EX2) |
@@ -25,7 +25,7 @@
 | **Benefits to Organization** | The business will be able to generate reports on population data, enabling its broader function as an organisation |
 | **Trigger(s)** | The employee is met with a request for a specified country report |
 | **Preconditions** | Employee is logged on to the system and has the correct authorisation for the querying application |
-| **Postconditions** | A report is generated, listing _N_ countries in a specified geographical unit from largest to smallest |
+| **Postconditions** | A report is generated, listing _N_ countries in a specified geographical unit, ordered from largest to smallest |
 | **Main Course** | **1A.** Employee constructs SQL query for _N_ number of countries in the world
 |       				  | **2.** Employee submits query (See EX1)
 |       				  | **3.** Database returns a table of results (See EX2) |
@@ -43,7 +43,7 @@
 | **Benefits to Organization** | The business will be able to generate reports on population data, enabling its broader function as an organisation |
 | **Trigger(s)** | The employee is met with a request for a simple city report |
 | **Preconditions** | Employee is logged on to the system and has the correct authorisation for the querying application |
-| **Postconditions** | A report is generated, listing all the cities in a certain geographical unit from largest to smallest |
+| **Postconditions** | A report is generated, listing all the cities in a certain geographical unit, ordered from largest to smallest |
 | **Main Course** | **1A.** Employee constructs SQL query for all cities  in the world
 |       				  | **2.** Employee submits query (See EX1)
 |       				  | **3.** Database returns a table of results (See EX2) |
@@ -63,7 +63,7 @@
 | **Benefits to Organization** | The business will be able to generate reports on population data, enabling its broader function as an organisation |
 | **Trigger(s)** | The employee is met with a request for a specified city report |
 | **Preconditions** | Employee is logged on to the system and has the correct authorisation for the querying application |
-| **Postconditions** | A report is generated, listing _N_ cities in a specified geographical unit from largest to smallest |
+| **Postconditions** | A report is generated, listing _N_ cities in a specified geographical unit, ordered from largest to smallest |
 | **Main Course** | **1A.** Employee constructs SQL query for _N_ most populated cities  in the world
 |       				  | **2.** Employee submits query (See EX1)
 |       				  | **3.** Database returns a table of results (See EX2) |
