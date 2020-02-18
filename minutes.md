@@ -73,3 +73,29 @@ using code review requirements
 - The first portion of the meeting was spent settling a disagreement; Connor and Philip were at odds over task assignments. Both members apologised and the group inquired into possible causes for the problem.
 - The group quickly reviewed the current progress of everyone's tasks
 - Discussed the possibility of making some meetings virtual to save unnecessary travel and scheduling issues for Daniel and Connor
+
+### Meeting 8 | 07/02/2020 | 13:00-14:00
+
+- All members were present
+- The first portion of the meeting was spent settling a disagreement; Connor and Philip were at odds over task assignments. Both members apologised and the group inquired into possible causes for the problem.
+- The group quickly reviewed the current progress of everyone's tasks
+- Discussed the possibility of making some meetings virtual to save unnecessary travel and scheduling issues for Daniel and Connor
+
+### Meeting 9 | 11/02/2020 | 13:00-14:00
+
+- Meeting was held virtually via Discord
+- Group briefly discussed their progress on the assigned tasks
+- Agreed to start work on further feature branches such as Unit Tests
+
+### Meeting 10 | 14/02/2020 | 13:00-14:00
+
+- Saul was absent and notified the group in advance
+- [to-be-completed, since minutes were not directly taken]
+
+### Meeting 11 | 18/02/2020 | 13:00-14:00
+
+- Daniel was absent due to illness, he notified us in advance as well as noted that he would be absent for the code review
+- All other members were present
+- Meeting was held virtually via Discord
+- Reviewed tasks and made sure that everything is completed
+- Scheduled to merge and finalise branches before the code review
