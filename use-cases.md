@@ -1,6 +1,6 @@
 #### Simple Country Report
 
-| **Name** | Simple country report |
+| **Name** | Simple Country report |
 | --- | --- |
 | **Description** | An employee of the organisation generates a report related to all the countries in a specified geographical unit, ordered from largest to smallest |
 | **Actors** | Employee |
@@ -16,7 +16,7 @@
 | **Exceptions** | EX1: the employee-supplied SQL query contains invalid syntax
 |				         | EX2: the database fails to return any rows |
 
-#### Specified Country Reports
+#### Specified Country Report
 
 | **Name** | Specified Country Report |
 | --- | --- |
@@ -54,7 +54,7 @@
 | **Exceptions** | EX1: the employee-supplied SQL query contains invalid syntax
 |       				 | EX2: the database fails to return any rows |
 
-#### Specified City Reports
+#### Specified City Report
 
 | **Name** | Specified City Report |
 | --- | --- |
@@ -74,7 +74,7 @@
 | **Exceptions** | EX1: the employee-supplied SQL query contains invalid syntax
 |				         | EX2: the database fails to return any rows |
 
-#### Simple Capital City Reports
+#### Simple Capital City Report
 
 | **Name** | Simple Capital City Report |
 | --- | --- |
@@ -92,7 +92,7 @@
 | **Exceptions** | EX1: the employee-supplied SQL query contains invalid syntax
 |				         | EX2: the database fails to return any rows |
 
-#### Specified Capital City Reports
+#### Specified Capital City Report
 
 | **Name** | Specified Capital City Report |
 | --- | --- |
