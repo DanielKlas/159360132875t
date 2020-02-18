@@ -1,4 +1,5 @@
-# 159360132875t
-**Software Engineering Methods**
+# Software Engineering Methods
+**README - Build Status Badge(s) and Useful Information**
 
-This is the first release. It contains all the necessary file states for the first code review. 
+
+[![Build Status](https://travis-ci.com/DanielKlas/159360132875t.svg?branch=master)](https://travis-ci.com/DanielKlas/159360132875t)
