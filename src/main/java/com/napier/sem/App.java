@@ -17,9 +17,8 @@ public class App
 
         // Connect to database
         dbConnection.connect();
-
+        //Population Reports
         PopReportGenerator popReportGenerator = new PopReportGenerator();
-
         String worldReport = popReportGenerator.getWorldQuery();
         System.out.println(worldReport);
 
@@ -37,6 +36,17 @@ public class App
 
         String cityReport = popReportGenerator.getCityQuery("Manchester");
         System.out.println(cityReport);
+        System.out.println("END OF POPULATION REPORTS \n\n\n");
+        // Language Reports
+        LanguageReportGenerator LRG = new LanguageReportGenerator();
+        String report = LRG.getLanguagesQuery();
+        System.out.println(report);
+
+
+        LanguageReportGenerator languageReportGenerator = new LanguageReportGenerator();
+
+        String languageReport = languageReportGenerator.getLanguagesQuery();
+        System.out.println(languageReport);
 
         // Disconnect from database
         dbConnection.disconnect();
