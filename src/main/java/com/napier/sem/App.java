@@ -39,7 +39,7 @@ public class App
         System.out.println("END OF POPULATION REPORTS \n\n\n");
         // Language Reports
         LanguageReportGenerator LRG = new LanguageReportGenerator();
-        String report = LRG.getLanguagesQuery("Chinese");
+        String report = LRG.getLanguagesQuery();
         System.out.println(report);
 
 
