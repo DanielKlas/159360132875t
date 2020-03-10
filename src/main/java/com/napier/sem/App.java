@@ -16,7 +16,7 @@ public class App
         App a = new App();
 
         // Connect to database
-        dbConnection.connect("localhost:33060");
+        dbConnection.connect("db:3306");
         //Population Reports
         PopReportGenerator popReportGenerator = new PopReportGenerator();
         String worldReport = popReportGenerator.getWorldQuery();
