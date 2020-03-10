@@ -1,6 +1,5 @@
-sudo: false
-
 language: java
+sudo: false
 
 services:
   - docker
@@ -14,11 +13,15 @@ install:
   -docker run --rm -d -e MYSQL_ROOT_PASSWORD=example -p 33060:3306 database
   -mvn install -DskipTests=true -DMaven.javadoc.skip=true -B -V
 
-before_script: :
+before_script:
   -mvn clean
 
 jobs:
   include:
+    - stage: unit tests
+      install: skip
+      jdk: oraclejdk11
+      script: echo "unit tests"
     - stage: integration tests
       jdk: oraclejdk11
       script: echo "Integration Tests"
@@ -28,8 +31,7 @@ jobs:
       script: echo "Deploy"
 
 stages:
+  -unit tests
   -integration tests
   -name: deploy
   if: branch = master
-after_success:
-  - docker-compose up --abort-on-container-exit
