@@ -1,4 +1,5 @@
 language: java
+
 sudo: false
 
 services:
@@ -6,7 +7,7 @@ services:
 
 addons:
   hosts:
-    -db
+    - db
 
 install:
   -docker build -t database db/.
@@ -28,7 +29,9 @@ jobs:
     - stage: deploy
       install: skip
       jdk: oraclejdk11
-      script: echo "Deploy"
+      script:
+        - mbn package -DskipTests=true -Dmaven.javadoc.skip=true
+        - docker-compose up --abort-on-container-exit
 
 stages:
   -unit tests
