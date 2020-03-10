@@ -30,7 +30,7 @@ jobs:
       install: skip
       jdk: oraclejdk11
       script:
-        - mbn package -DskipTests=true -Dmaven.javadoc.skip=true
+        - mvn package -DskipTests=true -Dmaven.javadoc.skip=true
         - docker-compose up --abort-on-container-exit
 
 stages:
