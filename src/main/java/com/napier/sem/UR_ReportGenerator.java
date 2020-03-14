@@ -37,7 +37,8 @@ public class UR_ReportGenerator {
                 int UrbanPop = results.getInt("CityPop");
                 String Name = results.getString("c.name");
                 int RuralPop = TotalPop - UrbanPop;
-                Holder = "| " + Name + " | Urban Population" + UrbanPop + " | Rural Population" + RuralPop + " |";
+                Holder = "| " + Name + " | Urban Population: " + UrbanPop + " | Rural Population: " + RuralPop + " |";
+                results.next();
             }
         }
         catch(Exception e) {
