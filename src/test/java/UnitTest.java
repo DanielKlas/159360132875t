@@ -1,5 +1,6 @@
+import com.napier.sem.*;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -10,14 +11,22 @@ public class UnitTest {
     class MyTest
     {
         @Test
-        void unitTest()
+        void DBConnectionTest()
         {
-            String line;
-            String pattern = "(.*)(\\d+)(.*)";
-
-            Pattern r = Pattern.compile(pattern);
-
-            assertEquals(5, 5);
+            DBConnection connection = DBConnection.getInstance();
+           Boolean Result = connection.connect();
+            assertTrue(Result);
         }
+
+        @Test
+        void DBdisconnect(){
+            DBConnection connection = DBConnection.getInstance();
+            connection.connect();
+            Boolean Result = connection.disconnect();
+            assertTrue(Result);
+        }
+
+
+
     }
 }
