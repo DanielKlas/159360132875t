@@ -49,30 +49,8 @@ public class UR_ReportGenerator {
         return Holder;
     }
 
-public String GenerateRegion(){
-     try {
-         String Queryct = "SELECT c.region, SUM(ct.population) AS CityPop FROM city ct, country c WHERE c.code = ct.countrycode GROUP BY region;";
-         String Queryc = "SELECT c.region, SUM(c.population) AS CountryPop FROM country c GROUP BY region;";
-         ResultSet results1 = statement.executeQuery(Queryct);
-         ResultSet results2 = statement.executeQuery(Queryc);
-
-         System.out.println("| Antartica |  Urban Population: 0 " +  " | Rural Population: 0 " + " |");
-         results2.next();
-         while (results1.next() && results2.next()) {
-             int UrbanPop = results1.getInt("CityPop");
-             int Totalpop = results2.getInt("CountryPop");
-             int RuralPop = Totalpop - UrbanPop;
-             String Name = results2.getString("c.region");
-             Holder = "| " + Name + " | Urban Population: " + UrbanPop + " | Rural Population: " + RuralPop + " |";
-             System.out.println(Holder);
-         }
-     }
-    catch (Exception e) {
-         System.out.println("Fail Region Report");
-    }
-     return Holder;
-    }
-    public String GenerateContinent(){return "lol";}
+public String GenerateRegion(){ return Holder; }
+public String GenerateContinent(){return "lol";}
 
 
 
