@@ -32,7 +32,7 @@ public class UR_ReportGenerator {
         try {
             String Query = "select c.continent, c.region, c.name, c.population AS CountryPop , SUM(ct.population) AS CityPop  from country c, city ct where c.code = ct.CountryCode group by  c.continent, c.region, c.name;   ";
             ResultSet results = statement.executeQuery(Query);
-            if(results.next()) {
+            while(results.next() == true) {
                 int TotalPop = results.getInt("CountryPop");
                 int UrbanPop = results.getInt("CityPop");
                 String Name = results.getString("c.name");
