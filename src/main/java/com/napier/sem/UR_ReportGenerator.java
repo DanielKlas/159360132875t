@@ -57,9 +57,10 @@ public String GenerateRegion(){
          ResultSet results2 = statement.executeQuery(Queryc);
          while (results1.next() && results2.next()) {
              int UrbanPop = results1.getInt("CityPop");
-             int Ruralpop = results2.getInt("CountryPop");
+             int Totalpop = results2.getInt("CountryPop");
+             int RuralPop = Totalpop - UrbanPop;
              String Name = results2.getString("c.region");
-             Holder = "| " + Name + " | Urban Population: " + UrbanPop + " | Rural Population: " + Ruralpop + " |";
+             Holder = "| " + Name + " | Urban Population: " + UrbanPop + " | Rural Population: " + RuralPop + " |";
              System.out.println(Holder);
          }
      }
