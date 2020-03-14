@@ -55,6 +55,7 @@ public String GenerateRegion(){
          String Queryc = "SELECT c.region, SUM(c.population) AS CountryPop FROM country c GROUP BY region;";
          ResultSet results1 = statement.executeQuery(Queryct);
          ResultSet results2 = statement.executeQuery(Queryc);
+         if(results2.getInt("CountryPop" ) == 0 ) { results2.next();}
          while (results1.next() && results2.next()) {
              int UrbanPop = results1.getInt("CityPop");
              int Totalpop = results2.getInt("CountryPop");
