@@ -38,6 +38,11 @@ public class App
         String cityReport = popReportGenerator.getCityQuery("Manchester");
         System.out.println(cityReport);
 
+        // Philip Section
+        System.out.println("---------------BEGINNING OF URBAN RURAL REPORTS-------------");
+        UR_ReportGenerator urgenerator = new UR_ReportGenerator();
+        String URCountryReport = urgenerator.GenerateCountry();
+        System.out.println(URCountryReport);
         // Disconnect from database
         dbConnection.disconnect();
     }
