@@ -30,9 +30,9 @@ public class UR_ReportGenerator {
     // Method to Generate Urban/Rural Reports for each country
     public String GenerateCountry(){
         try {
-            String Query = "select c.continent, c.region, c.name, c.population AS CountryPop , SUM(ct.population) AS CityPop  from country c, city ct where c.code = ct.CountryCode group by  c.continent, c.region, c.name;   ";
-            ResultSet results = statement.executeQuery(Query);
-            while(results.next()) {
+                String Query = "select c.continent, c.region, c.name, c.population AS CountryPop , SUM(ct.population) AS CityPop  from country c, city ct where c.code = ct.CountryCode group by  c.continent, c.region, c.name;   ";
+                ResultSet results = statement.executeQuery(Query);
+                while(results.next()) {
                 int TotalPop = results.getInt("CountryPop");
                 int UrbanPop = results.getInt("CityPop");
                 String Name = results.getString("c.name");
@@ -40,16 +40,38 @@ public class UR_ReportGenerator {
                 Holder = "| " + Name + " | Urban Population: " + UrbanPop + " | Rural Population: " + RuralPop + " |";
                 System.out.println(Holder);
 
+                }
             }
-        }
-        catch(Exception e) {
+            catch(Exception e) {
             System.out.println("Fail Generate Country");
             return null;
         }
         return Holder;
     }
 
+public String GenerateRegion(){
+     try {
+         String Queryct = "SELECT c.region, SUM(ct.population) AS CityPop FROM city ct, country c WHERE c.code = ct.countrycode GROUP BY region;";
+         String Queryc = "SELECT c.region, SUM(c.population) AS CountryPop FROM country c GROUP BY region;";
+         ResultSet results1 = statement.executeQuery(Queryct);
+         ResultSet results2 = statement.executeQuery(Queryc);
+         while (results1.next() && results2.next()) {
+             int UrbanPop = results1.getInt("CityPop");
+             int Ruralpop = results2.getInt("CountryPop");
+             String Name = results2.getString("c.region");
+             Holder = "| " + Name + " | Urban Population: " + UrbanPop + " | Rural Population: " + Ruralpop + " |";
+             System.out.println(Holder);
+         }
+     }
+    catch (Exception e) {
+         System.out.println("Fail Region Report");
+    }
+     return Holder;
+    }
+    public String GenerateContinent(){return "lol";}
 
 
 
-}
+    }
+
+

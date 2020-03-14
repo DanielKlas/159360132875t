@@ -42,7 +42,10 @@ public class App
         System.out.println("---------------BEGINNING OF URBAN RURAL REPORTS-------------");
         UR_ReportGenerator urgenerator = new UR_ReportGenerator();
         String URCountryReport = urgenerator.GenerateCountry();
-        
+
+        System.out.println("\n\n ------------------REGION BASED REPORTS --------------------");
+        urgenerator.GenerateRegion();
+
         // Disconnect from database
         dbConnection.disconnect();
     }
