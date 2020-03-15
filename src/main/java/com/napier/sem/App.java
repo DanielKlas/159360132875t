@@ -16,7 +16,13 @@ public class App
         App a = new App();
 
         // Connect to database
-        dbConnection.connect("db:3306");
+        if (args.length<1)
+        {
+            dbConnection.connect("db:3306");
+        }
+        else{
+            dbConnection.connect(args[0]);
+        }
         //Population Reports
         PopReportGenerator popReportGenerator = new PopReportGenerator();
         String worldReport = popReportGenerator.getWorldQuery();
