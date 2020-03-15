@@ -49,7 +49,29 @@ public class UR_ReportGenerator {
         return Holder;
     }
 
-public String GenerateRegion(){ return Holder; }
+public String GenerateRegion(){
+          try {
+              String Query = "select T1.region, T1.citypop , T2.countrypop" +
+                      "from ( select c.region , sum(ct.population) AS CITYPOP  from city ct, country c where ct.countrycode = c.code  GROUP BY REGION) as T1," +
+                      "     ( select c.region , sum(c.population) As countrypop from country c group by region ) as T2" +
+                      "where T1.region = T2.region";
+
+              ResultSet results = statement.executeQuery(Query);
+              while (results.next()) {
+                  int TotalPop = results.getInt("citypop");
+                  int UrbanPop = results.getInt("countrypop");
+                  String name = results.getString("region");
+                  int RuralPop = TotalPop - UrbanPop;
+                  Holder = "| " + name + " | " + "Urban Population: " + UrbanPop + " | Rural Population: " + RuralPop + " |";
+              }
+          }
+          catch(Exception e){
+              System.out.println("Fail Region");
+              return null;
+             }
+        return Holder;
+    }
+
 public String GenerateContinent(){return "lol";}
 
 
