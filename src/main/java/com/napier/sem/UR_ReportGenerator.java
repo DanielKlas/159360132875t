@@ -70,7 +70,24 @@ public String GenerateRegion(){
         return Holder;
     }
 
-public String GenerateContinent(){return "lol";}
+public String GenerateContinent(){try {
+    String Query = "select T1.continent, T1.citypop , T2.countrypop from ( select c.continent , sum(ct.population) AS CITYPOP  from city ct, country c where ct.countrycode = c.code  GROUP BY continent) as T1,( select c.continent , sum(c.population) As countrypop from country c group by continent ) as T2where T1.continent = T2.continent\n";
+
+    ResultSet results = statement.executeQuery(Query);
+    while (results.next()) {
+        int UrbanPop = results.getInt("citypop");
+        int TotalPop = results.getInt("countrypop");
+        String name = results.getString("region");
+        int RuralPop = TotalPop - UrbanPop;
+        Holder = "| " + name + " | " + "Urban Population: " + UrbanPop + " | Rural Population: " + RuralPop + " |";
+        System.out.println(Holder);
+    }
+}
+catch(Exception e){
+    System.out.println("Fail Continent");
+    return null;
+}
+    return Holder;}
 
 
 
