@@ -60,6 +60,7 @@ public String GenerateRegion(){
                   String name = results.getString("region");
                   int RuralPop = TotalPop - UrbanPop;
                   Holder = "| " + name + " | " + "Urban Population: " + UrbanPop + " | Rural Population: " + RuralPop + " |";
+                  System.out.println(Holder);
               }
           }
           catch(Exception e){
