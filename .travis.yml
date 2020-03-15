@@ -23,9 +23,6 @@ jobs:
       install: skip
       jdk: oraclejdk11
       script: echo "unit tests"
-    - stage: integration tests
-      install: oraclejdk11
-      script: mvn test -Dtest=com.napier.sem.AppIntegrationTest
     - stage: deploy
       install: skip
       jdk: oraclejdk11
