@@ -77,7 +77,7 @@ public String GenerateContinent(){try {
     while (results.next()) {
         int UrbanPop = results.getInt("citypop");
         int TotalPop = results.getInt("countrypop");
-        String name = results.getString("region");
+        String name = results.getString("continent");
         int RuralPop = TotalPop - UrbanPop;
         Holder = "| " + name + " | " + "Urban Population: " + UrbanPop + " | Rural Population: " + RuralPop + " |";
         System.out.println(Holder);

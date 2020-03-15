@@ -46,6 +46,10 @@ public class App
         System.out.println("\n\n ------------------REGION BASED REPORTS --------------------");
         urgenerator.GenerateRegion();
 
+        System.out.println("------------------CONTINENT BASED REPORTS--------------------------");
+        urgenerator.GenerateRegion();
+        System.out.println("-----------------END OF URBAN RURAL REPORTS------------------------");
+        // End of Philip Section
         // Disconnect from database
         dbConnection.disconnect();
     }
