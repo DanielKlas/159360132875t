@@ -1,4 +1,4 @@
 FROM openjdk:11
-COPY ./target/seMethodsCoursework.jar /tmp
+COPY ./target/CourseWork-1.0-SNAPSHOT-jar-with-dependencies.jar/tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "-jar", "seMethods.jar","db:3306"]
+ENTRYPOINT ["java", "-jar", "CourseWork-1.0-SNAPSHOT-jar-with-dependencies.jar","db:3306"]
