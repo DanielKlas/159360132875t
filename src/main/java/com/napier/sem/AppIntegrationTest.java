@@ -21,7 +21,8 @@ public class AppIntegrationTest
     @Test
     void testGetEmployee()
     {
-
+        int test =0;
+        assertEquals(test,0);
     }
 }
 
