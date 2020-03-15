@@ -25,4 +25,3 @@ public class AppIntegrationTest
         assertEquals(test,0);
     }
 }
-
