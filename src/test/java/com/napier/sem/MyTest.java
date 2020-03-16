@@ -9,14 +9,14 @@ class MyTest
     @Test
     void DBConnectionTest()
     {
-        DBConnection connection = DBConnection.getInstance();
+        DBConnection connection = DBConnection.getInstance("db::3306");
         Boolean Result = connection.connect();
         assertTrue(Result);
     }
 
     @Test
     void DBdisconnect(){
-        DBConnection connection = DBConnection.getInstance();
+        DBConnection connection = DBConnection.getInstance("db::3306");
         connection.connect();
         Boolean Result = connection.disconnect();
         assertTrue(Result);
