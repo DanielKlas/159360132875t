@@ -11,5 +11,15 @@ class MyTest
     {
         int i =5;
         assertEquals(i,5);
+
     }
+    @Test
+    void DBConnectionTest()
+    {
+        DBConnection connection = DBConnection.getInstance();
+        Boolean Result = connection.connect("db:3306");
+        assertTrue(Result);
+    }
+
+
 }
