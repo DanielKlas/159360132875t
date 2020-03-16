@@ -17,7 +17,7 @@ class MyTest
     void DBConnectionTest()
     {
         DBConnection connection = DBConnection.getInstance();
-        Boolean Result = connection.connect("db:3306");
+        Boolean Result = connection.connect("localhost:33060");
         assertTrue(Result);
     }
 
