@@ -26,7 +26,9 @@ public class AppIntegrationTest
     @Test
     void testReportTwo()
     {
-        assertTrue(app.LanguageReportMenu().length()>0);
+        DBConnection connection = DBConnection.getInstance();
+        Boolean Result = connection.connect("localhost:33060");
+        assertTrue(Result);
     }
 
 
