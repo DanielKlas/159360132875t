@@ -26,7 +26,7 @@ public class AppIntegrationTest
     @Test
     void testReportTwo()
     {
-        //assertTrue(app.LanguageReportMenu().length()>0);
+        assertTrue(app.LanguageReportMenu().length()>0);
     }
 
 
