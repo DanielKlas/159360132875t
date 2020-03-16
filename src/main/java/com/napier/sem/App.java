@@ -127,4 +127,8 @@ public class App
         System.out.println(languageReport);
     }
 
+    public int test()
+    {
+        return 0;
+    }
 }

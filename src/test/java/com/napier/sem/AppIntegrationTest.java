@@ -20,8 +20,6 @@ public class AppIntegrationTest
     @Test
     void testReportOne()
     {
-        PopReportGenerator popReportGenerator = new PopReportGenerator();
-        String worldQuery = popReportGenerator.getWorldQuery();
-        assertEquals("World \n" + "Population: " + 607879450 + "\n",worldQuery);
+        assertEquals(app.test(),0);
     }
 }
