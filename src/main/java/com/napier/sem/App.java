@@ -38,7 +38,7 @@ public class App
                         PopReportMenu();
                         break;
                     case "2":
-                        LanguageReportMenu();
+                        System.out.println(LanguageReportMenu());
                         break;
                     case "0":
                         return;
@@ -120,11 +120,12 @@ public class App
         }
     }
 
-    private static void LanguageReportMenu()
+    public static String LanguageReportMenu()
     {
         LanguageReportGenerator languageReportGenerator = new LanguageReportGenerator();
         String languageReport = languageReportGenerator.getLanguagesQuery();
         System.out.println(languageReport);
+        return languageReport;
     }
 
     public int test()

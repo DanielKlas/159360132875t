@@ -22,4 +22,9 @@ public class AppIntegrationTest
     {
         assertEquals(app.test(),0);
     }
+
+    void testReportTwo()
+    {
+        assertTrue(app.LanguageReportMenu().length()>0);
+    }
 }
