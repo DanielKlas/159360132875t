@@ -14,7 +14,7 @@ public class App
         dbConnection.connect();
         //Population Reports
 
-        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        CityReportGenerator popReportGenerator = new CityReportGenerator();
 
         ArrayList worldReport = popReportGenerator.getWorldQuery();
         System.out.println(worldReport);
