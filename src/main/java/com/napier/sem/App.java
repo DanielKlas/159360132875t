@@ -120,11 +120,11 @@ public class App
         }
     }
 
-        private static void LanguageReportMenu()
-        {
-            LanguageReportGenerator languageReportGenerator = new LanguageReportGenerator();
-            String languageReport = languageReportGenerator.getLanguagesQuery();
-            System.out.println(languageReport);
-        }
+    private static void LanguageReportMenu()
+    {
+        LanguageReportGenerator languageReportGenerator = new LanguageReportGenerator();
+        String languageReport = languageReportGenerator.getLanguagesQuery();
+        System.out.println(languageReport);
+    }
 
 }

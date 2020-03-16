@@ -18,9 +18,10 @@ public class AppIntegrationTest
     }
 
     @Test
-    void testGetEmployee()
+    void testReportOne()
     {
-        int test =0;
-        assertEquals(test,0);
+        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        String worldQuery = popReportGenerator.getWorldQuery();
+        assertEquals("World \n" + "Population: " + 607879450 + "\n",worldQuery);
     }
 }
