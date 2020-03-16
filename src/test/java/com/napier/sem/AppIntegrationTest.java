@@ -23,8 +23,11 @@ public class AppIntegrationTest
         assertEquals(app.test(),0);
     }
 
+    @Test
     void testReportTwo()
     {
         assertTrue(app.LanguageReportMenu().length()>0);
     }
+
+
 }
