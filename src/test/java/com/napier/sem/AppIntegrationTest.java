@@ -121,20 +121,11 @@ public class AppIntegrationTest
         assertTrue(report.contains("SQL broken"));
     }
 
-    @Test
-    void DBConnectionTest()
-    {
-        DBConnection connection = DBConnection.getInstance();
-        Boolean Result = connection.connect("localhost:33060");
-        assertTrue(Result);
-    }
 
     @Test
     void DBConnectionTest()
     {
-        DBConnection connection = DBConnection.getInstance();
-        connection.connect("localhost:33060");
-        Boolean Result = connection.disconnect();
+        Boolean Result = app.dbConnection.disconnect();
         assertTrue(Result);
     }
 
