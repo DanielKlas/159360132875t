@@ -30,7 +30,7 @@ public class AppIntegrationTest
     void testWorldReportFail()
     {
         PopReportGenerator popReportGenerator = new PopReportGenerator();
-        String report = popReportGenerator.displayWorldQuery("Mars")
+        String report = popReportGenerator.displayWorldQuery("Mars");
         assertTrue(report.contains("SQL broken"));
     }
 
