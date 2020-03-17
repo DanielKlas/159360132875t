@@ -19,14 +19,15 @@ public class AppIntegrationTest
     }
 
     @Test
-    void testReportOne()
+    void testWorldReport()
     {
-
-        assertEquals(app.test(),0);
+        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        String report = popReportGenerator.getWorldQuery();
+        assertEquals(report,"World \n" + "Population: 6078749450\n");
     }
 
     @Test
-    void testReportTwo()
+    void testLanguageReport()
     {
         LanguageReportGenerator languageReportGenerator = new LanguageReportGenerator();
         String report = languageReportGenerator.getLanguagesQuery();
