@@ -81,5 +81,14 @@ public class AppIntegrationTest
         assertTrue(report.contains("1191843539"));
     }
 
+    @Test
+    void testLanguageReportFail()
+    {
+        LanguageReportGenerator languageReportGenerator = new LanguageReportGenerator();
+        String report = languageReportGenerator.displayLanguagesReport("junk");
+        Exception e = assertThrows(Exception.class,()-> languageReportGenerator.displayLanguagesReport("junk"));
+        assertTrue(e.getMessage().contains("SQL broken"));
+    }
+
 
 }

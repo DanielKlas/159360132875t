@@ -18,7 +18,7 @@ public class LanguageReportGenerator {
         return displayLanguagesReport(string);
     }
 
-    private String displayLanguagesReport(String report)
+    public String displayLanguagesReport(String report)
     {
         String display="";
         try {
