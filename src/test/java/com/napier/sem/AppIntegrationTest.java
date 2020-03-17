@@ -87,7 +87,7 @@ public class AppIntegrationTest
         LanguageReportGenerator languageReportGenerator = new LanguageReportGenerator();
         String report = languageReportGenerator.displayLanguagesReport("junk");
         Exception e = assertThrows(Exception.class,()-> languageReportGenerator.displayLanguagesReport("junk"));
-        assertTrue(e.getMessage().contains("SQL broken"));
+        assertTrue(e.getMessage().contains("You have an error in your SQL syntax"));
     }
 
 
