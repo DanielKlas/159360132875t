@@ -57,7 +57,7 @@ public class AppIntegrationTest
     void testCountryReport()
     {
         PopReportGenerator popReportGenerator = new PopReportGenerator();
-        String report = popReportGenerator.getGeneralQuery("Country","France");
+        String report = popReportGenerator.getGeneralQuery("Name","France");
         assertTrue(report.contains("France"));
         assertTrue(report.contains("2369028000"));
     }
