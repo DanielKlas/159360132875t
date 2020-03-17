@@ -21,6 +21,7 @@ public class AppIntegrationTest
     @Test
     void testReportOne()
     {
+
         assertEquals(app.test(),0);
     }
 
