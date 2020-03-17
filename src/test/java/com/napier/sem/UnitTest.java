@@ -8,8 +8,6 @@ import java.util.regex.Pattern;
 
 public class UnitTest {
 
-    class MyTest
-    {
         @Test
         void DBConnectionTest()
         {
@@ -26,7 +24,4 @@ public class UnitTest {
             assertTrue(Result);
         }
 
-
-
-    }
 }
