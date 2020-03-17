@@ -21,7 +21,7 @@ public class UnitTest {
         @Test
         void DBdisconnect(){
             DBConnection connection = DBConnection.getInstance();
-            connection.connect();
+            connection.connect("localhost:33060");
             Boolean Result = connection.disconnect();
             assertTrue(Result);
         }
