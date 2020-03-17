@@ -1,6 +1,6 @@
 version: '3'
 services:
-  # Application Dockerfile is in same folder which is .
+  # Application Dockerfile is in same folder which his .
   app:
     build: .
     stdin_open: true

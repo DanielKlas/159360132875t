@@ -29,7 +29,7 @@ public class DBConnection {
     /**
      * Connect to the MariaDB database.
      */
-    public boolean connect()
+    public boolean connect(String location)
     {
         try
         {
@@ -51,7 +51,7 @@ public class DBConnection {
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mariadb://db:3306/world?useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:mariadb://"+location+"/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 return true;
             }

@@ -1,9 +1,38 @@
-sudo: required
-
 language: java
+
+sudo: false
 
 services:
   - docker
 
+addons:
+  hosts:
+    - db
+
+install:
+  - docker build -t database src/db/.
+  - docker run --rm -d -e MYSQL_ROOT_PASSWORD=example -p 33060:3306 database
+  - mvn install -DskipTests=true -DMaven.javadoc.skip=true -B -V
+
+before_script:
+  - mvn clean
+
+jobs:
+  include:
+    - stage: unit tests
+      jdk: oraclejdk11
+      script: mvn test -Dtest=com.napier.sem.UnitTest
+    - stage: integration tests
+      jdk: oraclejdk11
+      script: mvn test -Dtest=com.napier.sem.AppIntegrationTest
+    - stage: deploy
+      install: skip
+      jdk: oraclejdk11
+      script:
+        - mvn package -DskipTests=true -Dmaven.javadoc.skip=true
+
+stages:
+  - unit tests
+  - integration tests
 after_success:
-  - docker-compose up --abort-on-container-exit
+  - bash <(curl -s https://codecov.io/bash)
