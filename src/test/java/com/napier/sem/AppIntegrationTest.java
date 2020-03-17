@@ -31,15 +31,44 @@ public class AppIntegrationTest
     {
         PopReportGenerator popReportGenerator = new PopReportGenerator();
         String report = popReportGenerator.getCityQuery("Manchester");
-        assertEquals(report,"Manchester" +  "\n" + "Population: " + "537006" + "\n");
-}
+        assertTrue(report.contains("Manchester"));
+        assertTrue(report.contains("537006"));
+    }
+
+        @Test
+    void testContinentReport()
+    {
+        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        String report = popReportGenerator.getGeneralQuery("Continent","Asia")
+        assertTrue(report.contains("Asia"));
+        assertTrue(report.contains("900937599400"));
+    }
+
+    @Test
+    void testRegionReport()
+    {
+        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        String report = popReportGenerator.getGeneralQuery("Region","North America")
+        assertTrue(report.contains("North America"));
+        assertTrue(report.contains("77796214000"));
+    }
+
+    @Test
+    void testCountryReport()
+    {
+        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        String report = popReportGenerator.getGeneralQuery("Country","France");
+        assertTrue(report.contains("France"));
+        assertTrue(report.contains("2369028000"));
+    }
 
     @Test
     void testDistrictReport()
     {
         PopReportGenerator popReportGenerator = new PopReportGenerator();
         String report = popReportGenerator.getDistrictQuery("Scotland");
-        assertEquals(report,"Scotland \n" +"Population: 1429620\n");
+        assertTrue(report.contains("Scotland"));
+        assertTrue(report.contains("1429620"));
     }
 
 
@@ -48,7 +77,8 @@ public class AppIntegrationTest
     {
         LanguageReportGenerator languageReportGenerator = new LanguageReportGenerator();
         String report = languageReportGenerator.getLanguagesQuery();
-        assertTrue(report.length()>0);
+        assertTrue(report.contains("Chinese"));
+        assertTrue(report.contains("1191843539"));
     }
 
 
