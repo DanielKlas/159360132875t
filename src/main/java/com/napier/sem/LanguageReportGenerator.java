@@ -34,8 +34,8 @@ public class LanguageReportGenerator {
         }
         catch (Exception e)
         {
-            System.out.println("SQL broken");
             e.printStackTrace();
+            return ("SQL broken");
         }
         return display;
     }
