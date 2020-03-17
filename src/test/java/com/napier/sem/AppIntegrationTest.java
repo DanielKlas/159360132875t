@@ -31,7 +31,7 @@ public class AppIntegrationTest
     {
         PopReportGenerator popReportGenerator = new PopReportGenerator();
         String report = popReportGenerator.getCityQuery("Manchester");
-        assertEquals(report,"World \n" + "Population: 537006\n");
+        assertEquals(report,"City \n" + "Population: 537006\n");
     }
 
     @Test
