@@ -27,6 +27,23 @@ public class AppIntegrationTest
     }
 
     @Test
+    void testCityReport()
+    {
+        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        String report = popReportGenerator.getCityQuery("Manchester");
+        assertEquals(report,"World \n" + "Population: 537006\n");
+    }
+
+    @Test
+    void testDistrictReport()
+    {
+        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        String report = popReportGenerator.getDistrictQuery("Scotland");
+        assertEquals(report,"Scotland \n" +"Population: 1429620\n");
+    }
+
+
+    @Test
     void testLanguageReport()
     {
         LanguageReportGenerator languageReportGenerator = new LanguageReportGenerator();
