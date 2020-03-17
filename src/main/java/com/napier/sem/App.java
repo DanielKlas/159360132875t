@@ -29,6 +29,8 @@ public class App
             System.out.println("Please select a report type");
             System.out.println("1. Population");
             System.out.println("2. Language");
+            System.out.println("3. City");
+            System.out.println("4. Urban-Rural");
             System.out.println("0: Exit");
             try {
                 String input = reader.readLine();
@@ -39,6 +41,12 @@ public class App
                         break;
                     case "2":
                         System.out.println(LanguageReportMenu());
+                        break;
+                    case "3":
+                        CityReportMenu();
+                        break;
+                    case "4":
+                        UrbanRuralReportMenu();
                         break;
                     case "0":
                         return;
@@ -120,6 +128,106 @@ public class App
         }
     }
 
+
+    private static void CityReportMenu()
+    {
+        CityReportGenerator cityReportGenerator = new CityReportGenerator();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        while (true) {
+            System.out.println("Please select a report type");
+            System.out.println("1. Cities of the world");
+            System.out.println("2. Cities of a continent");
+            System.out.println("3. Cities of a region");
+            System.out.println("4. Cities of a country");
+            System.out.println("5. Cities of a district");
+            System.out.println("0: Exit");
+
+            try {
+                String input = reader.readLine();
+                System.out.println();
+                switch (input) {
+                    case "1":
+                        ArrayList worldReport = cityReportGenerator.getWorldQuery();
+                        System.out.println(worldReport);
+                        break;
+                    case "2":
+                        System.out.println("Please enter a continent" + "\n");
+                        String continent = reader.readLine();
+                        ArrayList continentReport = cityReportGenerator.getContinentQuery(continent);
+                        System.out.println(continentReport);
+                        break;
+                    case "3":
+                        System.out.println("Please enter a region" + "\n");
+                        String region = reader.readLine();
+                        ArrayList regionReport = cityReportGenerator.getRegionQuery(region);
+                        System.out.println(regionReport);
+                        break;
+                    case "4":
+                        System.out.println("Please enter a country" + "\n");
+                        String country = reader.readLine();
+                        ArrayList countryReport = cityReportGenerator.getCountryQuery(country);
+                        System.out.println(countryReport);
+                        break;
+                    case "5":
+                        System.out.println("Please enter a district" + "\n");
+                        String district = reader.readLine();
+                        ArrayList districtReport = cityReportGenerator.getDistrictQuery(district);
+                        System.out.println(districtReport);
+                        break;
+                    case "0":
+                        return;
+                    default:
+                        System.out.println("Invalid input");
+                        break;
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+                break;
+            }
+        }
+    }
+
+    private static void UrbanRuralReportMenu()
+    {
+        UR_ReportGenerator ur_reportGenerator = new UR_ReportGenerator();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        while (true) {
+            System.out.println("Please select a report type");
+            System.out.println("1. Country");
+            System.out.println("2. Region");
+            System.out.println("3. Continent");
+            System.out.println("0: Exit");
+
+            try {
+                String input = reader.readLine();
+                System.out.println();
+                switch (input) {
+                    case "1":
+                        String countryReport = ur_reportGenerator.GenerateCountry();
+                        System.out.println(countryReport);
+                        break;
+                    case "2":
+                        String regionReport = ur_reportGenerator.GenerateRegion();
+                        System.out.println(regionReport);
+                        break;
+                    case "3":
+                        String continentReport = ur_reportGenerator.GenerateContinent();
+                        System.out.println(continentReport);
+                        break;
+                    case "0":
+                        return;
+                    default:
+                        System.out.println("Invalid input");
+                        break;
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+                break;
+            }
+        }
+    }
     public static String LanguageReportMenu()
     {
         LanguageReportGenerator languageReportGenerator = new LanguageReportGenerator();
