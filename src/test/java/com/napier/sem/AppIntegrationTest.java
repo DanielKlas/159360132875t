@@ -27,12 +27,28 @@ public class AppIntegrationTest
     }
 
     @Test
+    void testWorldReportFail()
+    {
+        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        String report = popReportGenerator.displayWorldQuery("Mars")
+        assertTrue(report.contains("SQL broken"));
+    }
+
+    @Test
     void testCityReport()
     {
         PopReportGenerator popReportGenerator = new PopReportGenerator();
         String report = popReportGenerator.getCityQuery("Manchester");
         assertTrue(report.contains("Manchester"));
         assertTrue(report.contains("537006"));
+    }
+
+    @Test
+    void testCityReportFail()
+    {
+        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        String report = popReportGenerator.getCityQuery("City 17");
+        assertTrue(report.contains("SQL broken"));
     }
 
         @Test
@@ -42,6 +58,14 @@ public class AppIntegrationTest
         String report = popReportGenerator.getGeneralQuery("Continent","Asia");
         assertTrue(report.contains("Asia"));
         assertTrue(report.contains("900937599400"));
+    }
+    @Test
+
+    void testGeneralReportFail()
+    {
+        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        String report = popReportGenerator.getGeneralQuery("Moon","Ganymede");
+        assertTrue(report.contains("SQL broken"));
     }
 
     @Test
@@ -69,6 +93,14 @@ public class AppIntegrationTest
         String report = popReportGenerator.getDistrictQuery("Scotland");
         assertTrue(report.contains("Scotland"));
         assertTrue(report.contains("1429620"));
+    }
+
+    @Test
+    void testDistrictReportFail()
+    {
+        PopReportGenerator popReportGenerator = new PopReportGenerator();
+        String report = popReportGenerator.getDistrictQuery("District 9");
+        assertTrue(report.contains("SQL broken"));
     }
 
 

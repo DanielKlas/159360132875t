@@ -71,7 +71,7 @@ public class PopReportGenerator {
         return display;
     }
 
-    private String displayWorldQuery(String report)
+    public String displayWorldQuery(String report)
     {
         String display = null;
         try {
