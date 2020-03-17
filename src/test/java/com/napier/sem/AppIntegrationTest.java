@@ -89,5 +89,5 @@ public class AppIntegrationTest
         String report = languageReportGenerator.displayLanguagesReport("junk");
         assertTrue(report.contains("SQL broken"));
     }
-    
+
 }
