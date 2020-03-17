@@ -89,13 +89,5 @@ public class AppIntegrationTest
         String report = languageReportGenerator.displayLanguagesReport("junk");
         assertTrue(report.contains("SQL broken"));
     }
-
-
-    @Test
-    void DBConnectionTest()
-    {
-        Boolean Result = app.dbConnection.disconnect();
-        assertTrue(Result);
-    }
-
+    
 }
