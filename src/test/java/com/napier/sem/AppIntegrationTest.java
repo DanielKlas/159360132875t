@@ -39,7 +39,7 @@ public class AppIntegrationTest
     void testContinentReport()
     {
         PopReportGenerator popReportGenerator = new PopReportGenerator();
-        String report = popReportGenerator.getGeneralQuery("Continent","Asia")
+        String report = popReportGenerator.getGeneralQuery("Continent","Asia");
         assertTrue(report.contains("Asia"));
         assertTrue(report.contains("900937599400"));
     }
@@ -48,7 +48,7 @@ public class AppIntegrationTest
     void testRegionReport()
     {
         PopReportGenerator popReportGenerator = new PopReportGenerator();
-        String report = popReportGenerator.getGeneralQuery("Region","North America")
+        String report = popReportGenerator.getGeneralQuery("Region","North America");
         assertTrue(report.contains("North America"));
         assertTrue(report.contains("77796214000"));
     }
